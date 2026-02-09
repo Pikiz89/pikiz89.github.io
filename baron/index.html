@@ -3,17 +3,41 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="../style.css">
     <title>Beechcraft Baron 58 Perf</title>
 </head>
 <body>
     <script src="script.js"></script>
-    <h1>Soon on this page you will be able to</h1>
+    <header>
+        <h3>The long term goal of this page is being able to get :</h3>
+        <ol>
+            <li>CG calculation based on pax number, fuel and cargo on board.</li>
+            <li>Different aircraft weight like:<ul>
+                <li>Empty Weight</li>
+                <li>Take Off Weight</li>
+                <li>Estimated Landing Weight</li>
+                <li>Zero Fuel Weight</li>
+            </ul></li>
+            <li>A GO/NOGO final decision depending if the aircraft can be safely operated (within opeartional limits)</li>
+        </ol>
+    </header>
+
+    <hr style="border: black solid 1px;">
+
     <br><br>
-    <h4>Get CG values depending on the weight, get tow, lw, ...</h4>
-    <label for="pax_number">Number of PAX</label>
-    <input id="pax_number" type="range" min ="0" max="5" value="2">
-    <br><br>
-    <p>Calculated moment is : <span id="calculated_moment"></span> inches.</p><br>
-    <p>Calculated weight is : <span id="calculated_weight"></span> lbs.</p><br>
+    <main>
+        <h4>Get CG values depending on the weight, get tow, lw, ...</h4>
+        <b>Pilot is considered by default and therefore can't be removed</b><br>
+        <label for="pax_number">Number of PAX<span id="number_pax_selected"> (2 pax selected) </span></label>
+        <input id="pax_number" type="range" min ="0" max="5" value="2">
+        <br><br>
+        <p>you can adjust this bar if you want a somehow realist experience with FSEconomy..</p>
+        <label for="cargo_load">Cargo (705kg)<span id="cargo_load_selected"> (0 kg selected) </span></label>
+        <input id="cargo_load" type="range" min ="0" max="705" step="10" value="0">
+        <br><br>
+        <p>Calculated moment is : <span id="calculated_moment"></span> inches.</p>
+        <p>Calculated weight is : <span id="calculated_weight"></span> lbs.</p><br>
+    </main>
+    <div id="decision_box" style="color: black;">Play with the bars to know if you should takeoff or not!</div>
 </body>
 </html>

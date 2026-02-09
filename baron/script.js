@@ -34,7 +34,7 @@ document.addEventListener("DOMContentLoaded",()=>{
         let decision_box= document.getElementById("decision_box");
         if(calculatedCG <= 110 || calculatedCG >= 134){
             console.log("CG ISN'T GOOD AT ALL ! CAN'T TAKEOFF!");
-            decision_box.textContent = "Wow, you shouldn't try taking of mate!"
+            decision_box.textContent = "Wow, you shouldn't try taking off mate!"
             decision_box.style.backgroundColor = "red";
         }else{
             console.log("CG seems good. Can takeoff");

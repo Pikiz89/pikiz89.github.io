@@ -31,12 +31,19 @@
         <label for="pax_number">Number of PAX<span id="number_pax_selected"> (2 pax selected) </span></label>
         <input id="pax_number" type="range" min ="0" max="5" value="2">
         <br><br>
+
+        <label for="fuel_load">Fuel load (USG)<span id="fuel_load_selected"> (50 USG selected) </span></label>
+        <input id="fuel_load" type="range" min ="0" max="194" value="50" step="50">
+        <br><br>
+
         <p>you can adjust this bar if you want a somehow realist experience with FSEconomy..</p>
         <label for="cargo_load">Cargo (705kg)<span id="cargo_load_selected"> (0 kg selected) </span></label>
         <input id="cargo_load" type="range" min ="0" max="705" step="10" value="0">
         <br><br>
         <p>Calculated moment is : <span id="calculated_moment"></span> inches.</p>
+        <p>Calculated moment (without_fuel) is : <span id="calculated_moment_without_fuel"></span> inches.</p>
         <p>Calculated weight is : <span id="calculated_weight"></span> lbs.</p><br>
+        <p>Calculated weight (without fuel) is : <span id="calculated_weight_without_fuel"></span> lbs.</p><br>
     </main>
     <div id="decision_box" style="color: black;">Play with the bars to know if you should takeoff or not!</div>
 </body>

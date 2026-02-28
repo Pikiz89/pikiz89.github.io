@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded",()=>{
 
 function calculate_total_weigth() {
     let pax_number = document.getElementById("pax_number");
-    pax_number = pax_number.value;
+    pax_number = parseInt(pax_number.value);
     let cargo_load = document.getElementById("cargo_load");
     cargo_load = parseInt(cargo_load.value * KG_TO_LBS);
     let fuel_load = document.getElementById("fuel_load");
